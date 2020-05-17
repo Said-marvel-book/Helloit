@@ -1,32 +1,23 @@
-(function(){
-	var flickerAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
-	$.getJSON(flickerAPI, {
-		tags: "toys",
-		tagmode: "any",
-		format: "json"
+function send() {
+	let name = document.getElementById("name").value;
+	let surname = document.getElementById("surname").value;
+	let age = document.getElementById("age").value;
+
+	let API = "Your Api";
+	console.log(name);
+	console.log(surname);
+	console.log(age);
+
+	$.ajax({
+		url: API,
+		data: {
+			name:name,
+			surname:surname,
+			age:age
+		},
+		contentType: "application/json"
 	})
 	.done(function(data){
-		$.each(data.items, function(i, item){
-			$("<img>").attr("src", item.media.m).appendTo("#images");
-			if (i === 80){
-				return false;
-			}
-		});
+		console.log(data);
 	});
-})();
-(function(){
-	var flickerAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
-	$.getJSON(flickerAPI, {
-		tags: "school",
-		tagmode: "any",
-		format: "json"
-	})
-	.done(function(data){
-		$.each(data.items, function(i, item){
-			$("<img>").attr("src", item.media.m).appendTo("#images2");
-			if (i === 80){
-				return false;
-			}
-		});
-	});
-})();
+}
