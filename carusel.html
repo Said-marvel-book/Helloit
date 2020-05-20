@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <title>Карусель с Bootstrap</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="demo" class="carousel slide" data-ride="carousel">
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="nosofly.jpg" class="carousel-image" alt="Стрекорог" >
+      <div class="carousel-caption">
+        <h3>Стрекорог</h3>
+        <p>Гибрид стрекозы и носорога!😂😂😂😂</p>
+      </div>   
+    </div>
+    <div class="carousel-item">
+      <img src="parrot.jpg" class="carousel-image" alt="Попугай ара" >
+      <div class="carousel-caption">
+        <h3>Попугай ара</h3>
+        <p>Можно приучить повторять за тобой слова.</p>
+      </div>   
+    </div>
+    <div class="carousel-item">
+      <img src="leopard.jpg" class="carousel-image" alt="Леопард" >
+      <div class="carousel-caption">
+        <h3>Леопард</h3>
+        <p>Опасный и грациозный</p>
+      </div>   
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+<br>
+<div class="container">
+  <h2>Модальное окно</h2>
+  <p>На фига оно мне.</p>
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+    Open modal
+  </button>
+
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-dialog-centered">      
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Бла-бла-бла-бла-бла-бла-бла</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          Должен быть какой-то текст, но писать лень
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+        </div>
+      </div>
+      </div>
+    </div>
+</div>
+<br>
+<center>
+<div class="spinner-grow text-success"></div></center>
+<br><br><br><br><br>
+</body>
+</html>
